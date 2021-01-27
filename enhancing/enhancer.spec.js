@@ -24,3 +24,12 @@ describe('item repair test', () => {
         expect(repair(strongItem)).toBe(strongItem.durability)
     })
 })
+
+describe('item enhancement success', () => {
+    it('enhances weaker item accordingly', () => {
+        expect(success(weakItem)).toBe(weakItem.enhancement + 1)
+    })
+    it('handles fully enhanced item', () => {
+        expect(success(strongItem)).toBe(strongItem.enhancement)
+    })
+})
