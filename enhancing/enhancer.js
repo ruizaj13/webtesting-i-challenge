@@ -14,7 +14,12 @@ function fail(item) {
 }
 
 function repair(item) {
-  return { ...item };
+  if (item.durability == 100) {
+    return item.durability
+  } else {
+    const diff = 100 - item.durability
+    return item.durability + diff
+  }
 }
 
 function get(item) {
